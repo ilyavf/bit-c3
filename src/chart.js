@@ -36,6 +36,12 @@ can.Component.extend({
                     bindto: graphBaseElement,
                     data: {
                         columns: []
+                    },
+                    size: {
+                        height: this.viewModel.attr('sizeHeight')
+                    },
+                    legend: {
+                        hide: this.viewModel.attr('legendHide') && this.viewModel.attr('legendHide') === 'false' ? false : !!this.viewModel.attr('legendHide')
                     }
                 });
             this.viewModel.attr('chart', chart);
