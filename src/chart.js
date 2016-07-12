@@ -41,7 +41,8 @@ can.Component.extend({
                         height: this.viewModel.attr('sizeHeight')
                     },
                     legend: {
-                        hide: this.viewModel.attr('legendHide') && this.viewModel.attr('legendHide') === 'false' ? false : !!this.viewModel.attr('legendHide')
+                        hide: this.viewModel.attr('legendHide') === 'false' ? false : !!this.viewModel.attr('legendHide'),
+                        show: this.viewModel.attr('legendShow') === 'false' ? false : !!this.viewModel.attr('legendShow')
                     }
                 });
             this.viewModel.attr('chart', chart);
